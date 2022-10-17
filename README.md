@@ -1,7 +1,14 @@
-Usage:
+This module is complimentary on module [terraform-gke](https://github.com/Siebjee/terraform-gke-workload-identity).
+
+This module is creating the following components:
+* GCP Service account
+* GCP Role
+* GCP IAM Role Binding to the identity pool
+
+Example usage:
 ```terraform
 module "workload_identity_flux" {
-  source = "../../../modules/gke-workload-identity"
+  source = "git::https://github.com/Siebjee/terraform-gke-workload-identity?ref=0.1.0"
 
   project_id                 = "my-project"
   namespace                  = "flux-system"
